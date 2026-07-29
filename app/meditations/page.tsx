@@ -89,7 +89,7 @@ export async function MeditationList({
       <section className="py-8">
         <div className="container mx-auto px-4">
           {meditationTechniques.length > 0 ? (
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(512px,1fr))] gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {meditationTechniques.map((technique) => (
                 <MeditationCard key={technique.name} technique={technique} />
               ))}
