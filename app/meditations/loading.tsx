@@ -10,7 +10,7 @@ export default async function Loading() {
   return (
     <section className="py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(512px,1fr))] gap-4">
           {Array.from({ length: 5 }).map((_, index) => (
             <div key={index} className="block">
               <Card

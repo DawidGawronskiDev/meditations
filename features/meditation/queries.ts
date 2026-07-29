@@ -33,10 +33,17 @@ const mapTechnique = (technique: {
   shader: technique.shader!,
 });
 
-export const getMeditationTechniques = async (): Promise<
-  MeditationTechnique[]
-> => {
+export const getMeditationTechniques = async (filters?: {
+  chakraSlug?: string;
+  categorySlug?: string;
+}): Promise<MeditationTechnique[]> => {
   const techniques = await db.query.meditationTechnique.findMany({
+    where: {
+      ...(filters?.categorySlug && {
+        category: { slug: filters.categorySlug },
+      }),
+      ...(filters?.chakraSlug && { chakras: { slug: filters.chakraSlug } }),
+    },
     with: withRelations,
   });
   return techniques.map(mapTechnique);
@@ -57,3 +64,25 @@ export const getRandomMeditationTechnique =
     const techniques = await getMeditationTechniques();
     return techniques[Math.floor(Math.random() * techniques.length)];
   };
+
+export const getChakrasWithNameAndSlug = async (): Promise<
+  { id: number; name: string; slug: string }[]
+> => {
+  const chakras = await db.query.chakra.findMany();
+  return chakras.map((chakra) => ({
+    id: chakra.id,
+    name: chakra.name,
+    slug: chakra.slug,
+  }));
+};
+
+export const getCategoryWithNameAndSlug = async (): Promise<
+  { id: number; name: string; slug: string }[]
+> => {
+  const categories = await db.query.techniqueCategory.findMany();
+  return categories.map((category) => ({
+    id: category.id,
+    name: category.name,
+    slug: category.slug,
+  }));
+};
