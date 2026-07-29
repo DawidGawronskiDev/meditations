@@ -1,0 +1,370 @@
+import type { Shader } from "./shaders/blob";
+import { vertexShader, fragmentShader } from "./shaders/blob";
+
+export type Phase = {
+  action: "inhale" | "exhale" | "hold";
+  duration: number;
+  description: string;
+};
+
+export type Segment = {
+  phases: Phase[];
+  repeat: number;
+};
+
+export type ExtendedTechnique = {
+  slug: string;
+  name: string;
+  description: string;
+  category:
+    | "Heating & Energising"
+    | "Balancing & Harmonising"
+    | "Cooling & Calming";
+  associatedChakras: string[];
+  keywords: string[];
+  contraindications: string[];
+  instructions: string[];
+  totalRounds: number;
+  segments: Segment[];
+  shader: Shader;
+};
+
+export const bhastrikaPranayama: ExtendedTechnique = {
+  slug: "bhastrika-pranayama",
+  name: "Bhastrika Pranayama",
+  shader: {
+    name: "Bhastrika Shader",
+    vertexShader,
+    fragmentShader,
+    colors: {
+      primary: "#E73F1E",
+      secondary: "#FB6C00",
+    },
+    positionFrequency: 0.5,
+    timeFrequency: 0.4,
+    strength: 0.3,
+    warpSettings: {
+      warpPositionFrequency: 0.38,
+      warpTimeFrequency: 0.12,
+      warpStrength: 1.7,
+    },
+  },
+  description:
+    "Bhastrika, or bellows breath, is a fast, forceful breathing technique named for its resemblance to a blacksmith's bellows: sharp, diaphragm-driven inhales and exhales in quick succession. Traditionally it's used to clear the airways before deeper pranayama practice and to build heat and energy in the body.",
+  category: "Heating & Energising",
+  associatedChakras: ["Manipura (Solar Plexus)", "Muladhara (Root)"],
+  keywords: [
+    "Vitality",
+    "Internal Heat",
+    "Metabolism",
+    "Cleansing",
+    "Awakening",
+  ],
+  contraindications: [
+    "High blood pressure",
+    "Heart disease",
+    "Pregnancy",
+    "Hernia",
+    "Vertigo",
+  ],
+  instructions: [
+    "Sit tall with a relaxed spine and rest your hands on your knees.",
+    "Inhale and exhale forcefully through the nose, driving each breath from the diaphragm rather than the chest.",
+    "Keep the breaths equal in length and rapid, like a blacksmith's bellows.",
+    "After the final round, take one deep inhale and hold gently before releasing slowly.",
+  ],
+  totalRounds: 5,
+  segments: [
+    {
+      phases: [
+        { action: "inhale", duration: 1, description: "Inhale" },
+        { action: "exhale", duration: 1, description: "Exhale" },
+      ],
+      repeat: 9,
+    },
+    {
+      phases: [{ action: "hold", duration: 30, description: "Hold" }],
+      repeat: 1,
+    },
+  ],
+};
+
+export const kapalbhati: ExtendedTechnique = {
+  slug: "kapalbhati-pranayama",
+  name: "Kapalbhati Pranayama",
+  shader: {
+    name: "Bhastrika Shader",
+    vertexShader,
+    fragmentShader,
+    colors: {
+      primary: "#C7361A",
+      secondary: "#FF8A00",
+    },
+    positionFrequency: 0.5,
+    timeFrequency: 0.4,
+    strength: 0.3,
+    warpSettings: {
+      warpPositionFrequency: 0.38,
+      warpTimeFrequency: 0.12,
+      warpStrength: 1.7,
+    },
+  },
+  description:
+    "Known as the 'shining skull' breath. It features passive, spontaneous inhalations coupled with rapid, forceful exhalations driven entirely by the sharp contraction of the lower abdomen. It cleanses the respiratory tract, tones the digestive organs, and sharpens mental clarity.",
+  category: "Heating & Energising",
+  associatedChakras: ["Manipura (Solar Plexus)", "Ajna (Third Eye)"],
+  keywords: [
+    "Detoxification",
+    "Mental Clarity",
+    "Core Activation",
+    "Alertness",
+  ],
+  contraindications: [
+    "Pregnancy",
+    "Abdominal surgery",
+    "High blood pressure",
+    "Acid reflux",
+  ],
+  instructions: [
+    "Sit comfortably with a straight spine and relax your shoulders.",
+    "Let the inhale happen passively while you sharply contract your lower abdomen to force the exhale out through the nose.",
+    "Keep the rhythm quick and steady, focusing effort only on the exhale.",
+    "After a round, breathe deeply, hold gently, then release slowly before starting the next round.",
+  ],
+  totalRounds: 3,
+  segments: [
+    {
+      phases: [
+        {
+          action: "exhale",
+          duration: 1,
+          description: "Sharp, forceful abdominal exhalation",
+        },
+        {
+          action: "inhale",
+          duration: 1,
+          description: "Passive, relaxed inhalation",
+        },
+      ],
+      repeat: 20,
+    },
+    {
+      phases: [
+        {
+          action: "inhale",
+          duration: 4,
+          description: "Deep, smooth inhalation",
+        },
+        {
+          action: "hold",
+          duration: 45,
+          description: "Antar Kumbhaka (Internal breath retention)",
+        },
+        {
+          action: "exhale",
+          duration: 8,
+          description: "Slow, controlled exhalation",
+        },
+      ],
+      repeat: 1,
+    },
+  ],
+};
+
+export const nadiShodhana: ExtendedTechnique = {
+  slug: "nadi-shodhana",
+  name: "Nadi Shodhana",
+  shader: {
+    name: "Bhastrika Shader",
+    vertexShader,
+    fragmentShader,
+    colors: {
+      primary: "#5B3FA0",
+      secondary: "#2EC4B6",
+    },
+    positionFrequency: 0.5,
+    timeFrequency: 0.4,
+    strength: 0.3,
+    warpSettings: {
+      warpPositionFrequency: 0.38,
+      warpTimeFrequency: 0.12,
+      warpStrength: 1.7,
+    },
+  },
+  description:
+    "Alternate nostril breathing designed to balance the Ida (lunar) and Pingala (solar) energy channels. Utilizing a 1:4:2 ratio for inhalation, retention, and exhalation, it profoundly stabilizes the nervous system and induces deep psychological equilibrium.",
+  category: "Balancing & Harmonising",
+  associatedChakras: ["Anahata (Heart)", "Ajna (Third Eye)"],
+  keywords: ["Nervous System Balance", "Stress Relief", "Equilibrium", "Focus"],
+  contraindications: ["Severe nasal congestion or blockage"],
+  instructions: [
+    "Sit comfortably and use your right thumb to close your right nostril.",
+    "Inhale through the left nostril, then close it with your ring finger and hold the breath.",
+    "Release the right nostril and exhale slowly, then inhale through the same side.",
+    "Close the right nostril, hold, then release the left and exhale to complete one cycle.",
+  ],
+  totalRounds: 5,
+  segments: [
+    {
+      phases: [
+        {
+          action: "inhale",
+          duration: 4,
+          description: "Inhale through the left nostril (block right)",
+        },
+        {
+          action: "hold",
+          duration: 16,
+          description: "Kumbhaka (Full breath retention)",
+        },
+        {
+          action: "exhale",
+          duration: 8,
+          description: "Exhale through the right nostril (block left)",
+        },
+        {
+          action: "inhale",
+          duration: 4,
+          description: "Inhale through the right nostril (block left)",
+        },
+        {
+          action: "hold",
+          duration: 16,
+          description: "Kumbhaka (Full breath retention)",
+        },
+        {
+          action: "exhale",
+          duration: 8,
+          description: "Exhale through the left nostril (block right)",
+        },
+      ],
+      repeat: 1,
+    },
+  ],
+};
+
+export const sheetali: ExtendedTechnique = {
+  slug: "sheetali-pranayama",
+  name: "Sheetali Pranayama",
+  shader: {
+    name: "Bhastrika Shader",
+    vertexShader,
+    fragmentShader,
+    colors: {
+      primary: "#1E90C7",
+      secondary: "#7FE0FB",
+    },
+    positionFrequency: 0.5,
+    timeFrequency: 0.4,
+    strength: 0.3,
+    warpSettings: {
+      warpPositionFrequency: 0.38,
+      warpTimeFrequency: 0.12,
+      warpStrength: 1.7,
+    },
+  },
+  description:
+    "The cooling breath. Inhalation occurs through a rolled tongue, drawing air over moisture to immediately drop body temperature, soothe the nervous system, and calm intense emotional states like anger or agitation.",
+  category: "Cooling & Calming",
+  associatedChakras: ["Vishuddha (Throat)", "Swadhisthana (Sacral)"],
+  keywords: ["Cooling", "Anger Management", "Tranquility", "Thirst Quenching"],
+  contraindications: [
+    "Low blood pressure",
+    "Chronic respiratory issues like asthma",
+    "Cold/Flu",
+  ],
+  instructions: [
+    "Sit comfortably and curl the edges of your tongue into a tube, or purse your lips if you can't roll your tongue.",
+    "Inhale slowly through the rolled tongue, feeling the cool air pass over it.",
+    "Close your mouth and hold the breath gently for a moment.",
+    "Exhale slowly and completely through both nostrils.",
+  ],
+  totalRounds: 3,
+  segments: [
+    {
+      phases: [
+        {
+          action: "inhale",
+          duration: 4,
+          description: "Inhale deeply through the rolled tongue",
+        },
+        {
+          action: "hold",
+          duration: 8,
+          description: "Close the mouth and hold the breath gently",
+        },
+        {
+          action: "exhale",
+          duration: 6,
+          description: "Exhale smoothly through both nostrils",
+        },
+      ],
+      repeat: 15,
+    },
+  ],
+};
+
+export const bhramari: ExtendedTechnique = {
+  slug: "bhramari-pranayama",
+  name: "Bhramari Pranayama",
+  shader: {
+    name: "Bhastrika Shader",
+    vertexShader,
+    fragmentShader,
+    colors: {
+      primary: "#2E3F9E",
+      secondary: "#8A6CFB",
+    },
+    positionFrequency: 0.5,
+    timeFrequency: 0.4,
+    strength: 0.3,
+    warpSettings: {
+      warpPositionFrequency: 0.38,
+      warpTimeFrequency: 0.12,
+      warpStrength: 1.7,
+    },
+  },
+  description:
+    "The humming bee breath. A deep inhalation is followed by a prolonged, steady exhalation while producing a resonant humming sound. This creates a powerful internal vibration that stimulates the vagus nerve and quiets internal chatter.",
+  category: "Cooling & Calming",
+  associatedChakras: ["Vishuddha (Throat)", "Ajna (Third Eye)"],
+  keywords: [
+    "Vagus Nerve",
+    "Insomnia Relief",
+    "Vibration",
+    "Anxiety Reduction",
+  ],
+  contraindications: ["Active ear infections"],
+  instructions: [
+    "Sit comfortably, close your eyes, and rest your index fingers gently on the cartilage flaps over your ears.",
+    "Take a deep, unhurried inhale through the nose.",
+    "Exhale slowly while producing a steady, humming bee-like sound in your throat.",
+    "Let the vibration settle before starting the next round.",
+  ],
+  totalRounds: 4,
+  segments: [
+    {
+      phases: [
+        {
+          action: "inhale",
+          duration: 5,
+          description: "Deep, unhurried abdominal inhalation",
+        },
+        {
+          action: "exhale",
+          duration: 15,
+          description: "Exhale slowly while making a steady humming sound",
+        },
+      ],
+      repeat: 6,
+    },
+  ],
+};
+
+export const meditationTechniques: ExtendedTechnique[] = [
+  bhastrikaPranayama,
+  kapalbhati,
+  nadiShodhana,
+  sheetali,
+  bhramari,
+];
