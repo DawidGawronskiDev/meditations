@@ -1,11 +1,24 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { notFound } from "next/navigation";
 import { getMeditationTechniqueBySlug } from "@/features/meditation/queries";
 import { Meditation } from "@/features/meditation/components/meditation";
 import { Breadcrumbs } from "@/features/breadcrumbs/components/breadcrumbs";
+import Loading from "./loading";
 
-export default async function Page({
+export default function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  return (
+    <Suspense fallback={<Loading />}>
+      <MeditationContent params={params} />
+    </Suspense>
+  );
+}
+
+async function MeditationContent({
   params,
 }: {
   params: Promise<{ slug: string }>;
