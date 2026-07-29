@@ -43,7 +43,7 @@ export function Meditation({ meditationTechnique }: MeditationProps) {
         <MeditationVisuals
           onClick={() => setIsPaused(!isPaused)}
           shader={meditationTechnique.shader}
-          className="absolute inset-0 m-auto"
+          className="absolute inset-0"
         />
       </div>
       <MeditationPhaseIndicator

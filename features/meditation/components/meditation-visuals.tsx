@@ -20,13 +20,10 @@ export function MeditationVisuals({
     <div
       onClick={onClick}
       id="meditation-blob"
-      className={cn(
-        "w-full aspect-square rounded-full overflow-hidden",
-        className,
-      )}
+      className={cn("rounded-full overflow-hidden", className)}
       {...props}
     >
-      <Canvas>
+      <Canvas resize={{ scroll: false }}>
         <ambientLight intensity={2.0} />
         <directionalLight position={[0, 0, 5]} intensity={5.0} />
         <MeditationSphere shaderSettings={shader} />
