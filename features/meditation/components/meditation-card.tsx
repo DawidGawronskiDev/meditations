@@ -23,16 +23,22 @@ export function MeditationCard({
 }: MeditationCardProps) {
   return (
     <Link href={`/meditations/${technique.slug}`} className="block">
-      <Card className={cn("pt-0 relative", className)} {...props}>
-        <div className="w-full aspect-square flex items-center justify-center">
+      <Card
+        className={cn("relative ring-0", className)}
+        style={{
+          background: `linear-gradient(to top, ${technique.shader.colors.primary} 0%, ${technique.shader.colors.secondary}, transparent)`,
+        }}
+        {...props}
+      >
+        <div className="relative w-1/2 aspect-square flex items-center justify-center mx-auto">
           <MeditationVisuals
             shader={technique.shader}
             className="absolute inset-0"
           />
         </div>
         <CardHeader>
-          <CardTitle>{technique.name}</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-white">{technique.name}</CardTitle>
+          <CardDescription className="text-white/80">
             {technique.description.slice(0, 100)}...
           </CardDescription>
         </CardHeader>
