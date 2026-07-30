@@ -14,7 +14,7 @@ export function MeditationProgressCircle({
       style={
         {
           "--progress": "0%",
-          background: `conic-gradient(from 0deg, transparent 5%, ${colors.primary} var(--progress), transparent var(--progress))`,
+          background: `conic-gradient(from 0deg, transparent, color-mix(${colors.primary}, transparent), ${colors.secondary} var(--progress), transparent var(--progress))`,
           WebkitMaskImage:
             "radial-gradient(closest-side, transparent calc(100% - 1px), #000 calc(100% - 1px))",
           maskImage:
