@@ -47,7 +47,7 @@ async function MeditationContent({
       <Meditation meditationTechnique={technique} />
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-light tracking-tighter">Description</h2>
+          <h2 className="text-2xl font-light tracking-tighter md:text-3xl">Description</h2>
           <p className="text-muted-foreground text-pretty tracking-tight leading-loose mt-4">
             {technique.description}
           </p>
@@ -55,7 +55,7 @@ async function MeditationContent({
       </section>
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-light tracking-tighter">Instructions</h2>
+          <h2 className="text-2xl font-light tracking-tighter md:text-3xl">Instructions</h2>
           <p className="text-muted-foreground text-pretty tracking-tight leading-loose mt-4">
             {technique.instructions.map((instruction, index) => (
               <span key={index}>
@@ -68,7 +68,7 @@ async function MeditationContent({
       </section>
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-light tracking-tighter">Keywords</h2>
+          <h2 className="text-2xl font-light tracking-tighter md:text-3xl">Keywords</h2>
           <div className="flex flex-wrap gap-2 mt-4">
             {technique.keywords.map((keyword) => (
               <Badge key={keyword} variant="secondary">
@@ -81,7 +81,7 @@ async function MeditationContent({
       {technique.contraindications.length > 0 && (
         <section className="py-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-light tracking-tighter">
+            <h2 className="text-2xl font-light tracking-tighter md:text-3xl">
               Contraindications
             </h2>
             <ul className="flex flex-wrap gap-2 mt-4">

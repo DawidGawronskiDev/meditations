@@ -26,7 +26,7 @@ export function MeditationGallery({
   return (
     <section className={cn("py-32", className)} {...props}>
       <div className="container mx-auto px-4">
-        <h1 className="text-6xl font-light tracking-tighter">
+        <h1 className="text-4xl font-light tracking-tighter md:text-5xl lg:text-6xl">
           A Technique for Every Kind of Day
         </h1>
         <p className="mt-3 max-w-xl text-muted-foreground">
@@ -61,7 +61,7 @@ export function MeditationGallery({
                       <MeditationSphere shaderSettings={technique.shader} />
                     </MeditationVisuals>
                   </div>
-                  <h3 className="mt-4 text-2xl font-light tracking-tighter">
+                  <h3 className="mt-4 text-xl font-light tracking-tighter md:text-2xl">
                     {technique.name}
                   </h3>
                 </div>
