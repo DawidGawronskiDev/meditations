@@ -7,6 +7,7 @@ import { useMeditationAnimation } from "../hooks";
 import { MeditationVisuals } from "./meditation-visuals";
 import { MeditationProgressCircle } from "./meditation-progress-circle";
 import { MeditationPhaseIndicator } from "./meditation-phase-indicator";
+import { MeditationSphere } from "./meditation-sphere";
 
 type MeditationProps = React.ComponentProps<"section"> & {
   meditationTechnique: MeditationTechnique;
@@ -42,9 +43,10 @@ export function Meditation({ meditationTechnique }: MeditationProps) {
         <MeditationProgressCircle colors={meditationTechnique.shader.colors} />
         <MeditationVisuals
           onClick={() => setIsPaused(!isPaused)}
-          shader={meditationTechnique.shader}
           className="absolute inset-0"
-        />
+        >
+          <MeditationSphere shaderSettings={meditationTechnique.shader} />
+        </MeditationVisuals>
       </div>
       <MeditationPhaseIndicator
         currentPhase={currentPhase}

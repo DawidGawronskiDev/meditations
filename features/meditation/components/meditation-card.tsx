@@ -11,6 +11,7 @@ import {
 import { MeditationTechnique } from "../types";
 import { cn } from "@/lib/utils";
 import { MeditationVisuals } from "./meditation-visuals";
+import { MeditationSphere } from "./meditation-sphere";
 
 type MeditationCardProps = React.ComponentProps<typeof Card> & {
   technique: MeditationTechnique;
@@ -31,10 +32,9 @@ export function MeditationCard({
         {...props}
       >
         <div className="relative w-1/2 aspect-square flex items-center justify-center mx-auto">
-          <MeditationVisuals
-            shader={technique.shader}
-            className="absolute inset-0"
-          />
+          <MeditationVisuals className="absolute inset-0">
+            <MeditationSphere shaderSettings={technique.shader} />
+          </MeditationVisuals>
         </div>
         <CardHeader>
           <CardTitle className="text-white">{technique.name}</CardTitle>

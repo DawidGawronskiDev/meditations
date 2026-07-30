@@ -5,20 +5,15 @@ import { Canvas } from "@react-three/fiber";
 import type { Shader } from "../shaders/blob";
 import { MeditationSphere } from "./meditation-sphere";
 
-type MeditationVisualsProps = React.ComponentProps<"div"> & {
-  onClick?: () => void;
-  shader: Shader;
-};
+type MeditationVisualsProps = React.ComponentProps<"div">;
 
 export function MeditationVisuals({
-  onClick,
-  shader,
+  children,
   className,
   ...props
 }: MeditationVisualsProps) {
   return (
     <div
-      onClick={onClick}
       id="meditation-blob"
       className={cn("rounded-full overflow-hidden", className)}
       {...props}
@@ -26,7 +21,7 @@ export function MeditationVisuals({
       <Canvas resize={{ scroll: false }}>
         <ambientLight intensity={2.0} />
         <directionalLight position={[0, 0, 5]} intensity={5.0} />
-        <MeditationSphere shaderSettings={shader} />
+        {children}
       </Canvas>
     </div>
   );

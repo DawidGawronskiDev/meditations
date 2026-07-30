@@ -35,7 +35,7 @@ export function MeditationPhaseIndicator({
         loop: true,
       }}
       setApi={setApi}
-      className="mt-8 relative"
+      className="mt-12 relative"
     >
       <CarouselContent className="h-32">
         {meditationPhases.map((phase, index) => (
