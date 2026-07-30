@@ -1,35 +1,7 @@
-import type { Shader } from "./shaders/blob";
 import { vertexShader, fragmentShader } from "./shaders/blob";
+import type { MeditationTechnique } from "./types";
 
-export type Phase = {
-  action: "inhale" | "exhale" | "hold";
-  duration: number;
-  description: string;
-};
-
-export type Segment = {
-  phases: Phase[];
-  repeat: number;
-};
-
-export type ExtendedTechnique = {
-  slug: string;
-  name: string;
-  description: string;
-  category:
-    | "Heating & Energising"
-    | "Balancing & Harmonising"
-    | "Cooling & Calming";
-  associatedChakras: string[];
-  keywords: string[];
-  contraindications: string[];
-  instructions: string[];
-  totalRounds: number;
-  segments: Segment[];
-  shader: Shader;
-};
-
-export const bhastrikaPranayama: ExtendedTechnique = {
+export const bhastrikaPranayama: MeditationTechnique = {
   slug: "bhastrika-pranayama",
   name: "Bhastrika Pranayama",
   shader: {
@@ -89,7 +61,7 @@ export const bhastrikaPranayama: ExtendedTechnique = {
   ],
 };
 
-export const kapalbhati: ExtendedTechnique = {
+export const kapalbhati: MeditationTechnique = {
   slug: "kapalbhati-pranayama",
   name: "Kapalbhati Pranayama",
   shader: {
@@ -171,7 +143,7 @@ export const kapalbhati: ExtendedTechnique = {
   ],
 };
 
-export const nadiShodhana: ExtendedTechnique = {
+export const nadiShodhana: MeditationTechnique = {
   slug: "nadi-shodhana",
   name: "Nadi Shodhana",
   shader: {
@@ -243,7 +215,7 @@ export const nadiShodhana: ExtendedTechnique = {
   ],
 };
 
-export const sheetali: ExtendedTechnique = {
+export const sheetali: MeditationTechnique = {
   slug: "sheetali-pranayama",
   name: "Sheetali Pranayama",
   shader: {
@@ -304,7 +276,7 @@ export const sheetali: ExtendedTechnique = {
   ],
 };
 
-export const bhramari: ExtendedTechnique = {
+export const bhramari: MeditationTechnique = {
   slug: "bhramari-pranayama",
   name: "Bhramari Pranayama",
   shader: {
@@ -361,7 +333,7 @@ export const bhramari: ExtendedTechnique = {
   ],
 };
 
-export const meditationTechniques: ExtendedTechnique[] = [
+export const meditationTechniques: MeditationTechnique[] = [
   bhastrikaPranayama,
   kapalbhati,
   nadiShodhana,
