@@ -56,7 +56,7 @@ export async function MeditationList({
               <SelectContent avoidCollisions={true} align="start">
                 <SelectGroup>
                   {chakras.map((chakra) => (
-                    <SelectItem key={chakra.id} value={chakra.slug}>
+                    <SelectItem key={chakra.slug} value={chakra.slug}>
                       {chakra.name}
                     </SelectItem>
                   ))}
@@ -70,7 +70,7 @@ export async function MeditationList({
               <SelectContent avoidCollisions={true} align="start">
                 <SelectGroup>
                   {categories.map((category) => (
-                    <SelectItem key={category.id} value={category.slug}>
+                    <SelectItem key={category.slug} value={category.slug}>
                       {category.name}
                     </SelectItem>
                   ))}
