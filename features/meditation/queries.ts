@@ -12,10 +12,6 @@ export const getMeditationTechniques = async (filters?: {
   chakraSlug?: string;
   categorySlug?: string;
 }): Promise<MeditationTechnique[]> => {
-  const chakra = filters?.chakraSlug
-    ? chakras.find((c) => c.slug === filters.chakraSlug)
-    : undefined;
-
   return meditationTechniques.filter((technique) => {
     if (
       filters?.categorySlug &&
@@ -24,8 +20,8 @@ export const getMeditationTechniques = async (filters?: {
       return false;
     }
     if (
-      chakra &&
-      !technique.associatedChakras.some((c) => c.startsWith(chakra.sanskrit))
+      filters?.chakraSlug &&
+      !technique.associatedChakras.includes(filters.chakraSlug)
     ) {
       return false;
     }
