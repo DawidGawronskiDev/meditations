@@ -84,8 +84,8 @@ export function MeditationStats({
           Built Around the Breath
         </h2>
         <p className="mx-auto max-w-xl px-5 text-center text-sm text-muted-foreground lg:text-base">
-          Every technique is timed down to the second, not left to a guess —
-          grouped by the effect it has on your energy.
+          Every technique is timed down to the second, so pacing is never a
+          guess, and each one is grouped by the effect it has on your energy.
         </p>
 
         <div className="mt-18 grid w-full max-w-2xl grid-cols-1 gap-4 md:grid-cols-2">

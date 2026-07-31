@@ -31,7 +31,7 @@ export function MeditationGallery({
         </h1>
         <p className="mt-3 max-w-xl text-muted-foreground">
           From bellows breath to alternate-nostril breathing, each practice
-          has its own rhythm, sound, and effect — pick the one that matches
+          has its own rhythm, sound, and effect. Pick the one that matches
           how you want to feel.
         </p>
         <Carousel

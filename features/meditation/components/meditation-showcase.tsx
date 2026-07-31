@@ -3,7 +3,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MeditationTechnique, Phase } from "../types";
-import { flattenTechnique } from "../utils";
 import { useMeditationAnimation } from "../hooks";
 import { MeditationVisuals } from "./meditation-visuals";
 import { MeditationProgressCircle } from "./meditation-progress-circle";
@@ -14,17 +13,17 @@ import { Background } from "@/features/background/components/background";
 const MEDITATION_PHASES: Phase[] = [
   {
     action: "inhale",
-    duration: 4,
+    duration: 3,
     description: "Inhale",
   },
   {
     action: "hold",
-    duration: 7,
+    duration: 3,
     description: "Hold",
   },
   {
     action: "exhale",
-    duration: 8,
+    duration: 3,
     description: "Exhale",
   },
 ];
@@ -76,7 +75,7 @@ export function MeditationShowcase({ techniques }: MeditationProps) {
           />
           <MeditationVisuals
             onClick={() => setIsPaused(!isPaused)}
-            className="absolute inset-0"
+            className="absolute inset-0 z-500"
           >
             <MeditationSphere
               shaderSettings={techniques[currentPhase].shader}

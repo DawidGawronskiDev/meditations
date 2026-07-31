@@ -19,7 +19,7 @@ export function MeditationCTA({
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto">
           <div>
-            <h2 className="text-3xl font-light tracking-tighter md:text-4xl">
+            <h2 className="text-4xl font-light tracking-tighter">
               Not sure which technique to choose?
             </h2>
             <p className="text-muted-foreground mt-2 mb-4">

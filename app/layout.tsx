@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meditation Orbs — Guided Meditation Techniques",
+  title: "Meditation Orbs: Guided Meditation Techniques",
   description:
-    "Guided meditation techniques led by a living, breathing orb — practices to help you calm down, find balance, or build energy, timed to every breath.",
+    "Guided meditation techniques led by a living, breathing orb. Practices to help you calm down, find balance, or build energy, timed to every breath.",
 };
 
 export default function RootLayout({

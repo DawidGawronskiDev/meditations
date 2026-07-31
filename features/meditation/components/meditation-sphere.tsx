@@ -19,7 +19,10 @@ type MeditationSphereProps = React.ComponentProps<"mesh"> & {
   shaderSettings: Shader;
 };
 
-export function MeditationSphere({ shaderSettings }: MeditationSphereProps) {
+export function MeditationSphere({
+  shaderSettings,
+  ...props
+}: MeditationSphereProps) {
   const meshRef = React.useRef<THREE.Mesh>(null);
   const isFirstRender = React.useRef(true);
 
@@ -107,39 +110,39 @@ export function MeditationSphere({ shaderSettings }: MeditationSphereProps) {
     const tweens = [
       gsap.to(uniforms.uPositionFrequency, {
         value: shaderSettings.positionFrequency,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uTimeFrequency, {
         value: shaderSettings.timeFrequency,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uStrength, {
         value: shaderSettings.strength,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uWarpPositionFrequency, {
         value: shaderSettings.warpSettings.warpPositionFrequency,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uWarpTimeFrequency, {
         value: shaderSettings.warpSettings.warpTimeFrequency,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uWarpStrength, {
         value: shaderSettings.warpSettings.warpStrength,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uColorA.value, {
         r: targetColorA.r,
         g: targetColorA.g,
         b: targetColorA.b,
-        duration: 0.6,
+        duration: 2.0,
         ease: "power2.inOut",
       }),
       gsap.to(uniforms.uColorB.value, {
@@ -175,6 +178,7 @@ export function MeditationSphere({ shaderSettings }: MeditationSphereProps) {
       receiveShadow
       geometry={geometry}
       rotation={rotation}
+      {...props}
     >
       <primitive object={material} attach="material" />
       <primitive object={depthMaterial} attach="customDepthMaterial" />
