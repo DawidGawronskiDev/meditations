@@ -11,13 +11,14 @@ import { MeditationStats } from "@/features/meditation/components/meditation-sta
 import { MeditationCTA } from "@/features/meditation/components/meditation-cta";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { ChakraGallery } from "@/features/chakra/components/chakra-gallery";
 
 export default async function Page() {
   const techniques = await getMeditationTechniques();
 
   return (
     <React.Fragment>
-      <section className="pt-32">
+      <section>
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-5xl font-light tracking-tighter md:text-6xl lg:text-7xl">
@@ -25,7 +26,7 @@ export default async function Page() {
             </h1>
             <p className="text-muted-foreground text-pretty tracking-tight leading-loose mt-4">
               {techniques.length} guided meditation techniques, each led by a
-              living, breathing orb — pick one to calm down, find balance, or
+              living, breathing orb. Pick one to calm down, find balance, or
               build energy.
             </p>
             <Button asChild className="mt-6">
@@ -39,6 +40,7 @@ export default async function Page() {
       </section>
       <MeditationGallery techniques={techniques} />
       <MeditationStats techniques={techniques} />
+      <ChakraGallery techniques={techniques} />
       <MeditationCTA technique={await getRandomMeditationTechnique()} />
     </React.Fragment>
   );

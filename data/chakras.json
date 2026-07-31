@@ -3,56 +3,224 @@
     "slug": "muladhara",
     "name": "Root",
     "sanskrit": "Muladhara",
+    "meaning": "Root support",
     "location": "Base of spine",
     "color": "#E73F1E",
-    "element": "Earth"
+    "element": "Earth",
+    "sense": "Smell",
+    "seedMantra": "LAM",
+    "petals": 4,
+    "description": "Muladhara anchors you to the body and the earth. It governs survival, safety, and your sense of belonging, and it's the foundation the other six chakras stand on.",
+    "qualitiesBalanced": [
+      "Feeling grounded and secure",
+      "Stable sense of belonging",
+      "Trust in your body and its needs",
+      "Steady energy under pressure"
+    ],
+    "qualitiesImbalanced": [
+      "Chronic anxiety or restlessness",
+      "Financial or survival fears",
+      "Feeling disconnected from your body",
+      "Resistance to change"
+    ],
+    "affirmation": "I am safe, supported, and grounded.",
+    "healingPractices": [
+      "Barefoot walking on natural ground",
+      "Slow squats and standing postures",
+      "Root vegetables and warm, grounding meals",
+      "Bhastrika and Surya Bhedana pranayama"
+    ]
   },
   {
     "slug": "swadhisthana",
     "name": "Sacral",
     "sanskrit": "Swadhisthana",
-    "location": "Lower abdomen",
+    "meaning": "One's own place",
+    "location": "Lower abdomen, two inches below the navel",
     "color": "#FB6C00",
-    "element": "Water"
+    "element": "Water",
+    "sense": "Taste",
+    "seedMantra": "VAM",
+    "petals": 6,
+    "description": "Swadhisthana is the seat of creativity, pleasure, and emotional flow. It shapes how freely you feel, connect intimately, and move through change.",
+    "qualitiesBalanced": [
+      "Healthy emotional expression",
+      "Creative flow and playfulness",
+      "Comfort with intimacy and pleasure",
+      "Adaptability through change"
+    ],
+    "qualitiesImbalanced": [
+      "Emotional numbness or overwhelm",
+      "Creative blocks",
+      "Guilt around pleasure",
+      "Difficulty setting emotional boundaries"
+    ],
+    "affirmation": "I honor my emotions and let creativity move through me.",
+    "healingPractices": [
+      "Hip-opening movement or dance",
+      "Time near water",
+      "Journaling or other creative outlets",
+      "Chandra Bhedana pranayama"
+    ]
   },
   {
     "slug": "manipura",
     "name": "Solar Plexus",
     "sanskrit": "Manipura",
-    "location": "Upper abdomen",
+    "meaning": "City of jewels",
+    "location": "Upper abdomen, near the navel",
     "color": "#FFD400",
-    "element": "Fire"
+    "element": "Fire",
+    "sense": "Sight",
+    "seedMantra": "RAM",
+    "petals": 10,
+    "description": "Manipura is the body's inner fire — the source of willpower, confidence, and personal drive. A balanced third chakra fuels focused, purposeful action.",
+    "qualitiesBalanced": [
+      "Confident, clear decision-making",
+      "Healthy self-esteem",
+      "Motivation and follow-through",
+      "Comfortable sense of personal power"
+    ],
+    "qualitiesImbalanced": [
+      "Self-doubt or perfectionism",
+      "Need for control",
+      "Low motivation or burnout",
+      "Difficulty digesting food or emotions"
+    ],
+    "affirmation": "I am confident, capable, and in control of my choices.",
+    "healingPractices": [
+      "Core-strengthening movement",
+      "Sunlight exposure",
+      "Setting and completing small goals",
+      "Kapalbhati and Sitkari pranayama"
+    ]
   },
   {
     "slug": "anahata",
     "name": "Heart",
     "sanskrit": "Anahata",
+    "meaning": "Unstruck / unhurt",
     "location": "Center of chest",
     "color": "#2EC4B6",
-    "element": "Air"
+    "element": "Air",
+    "sense": "Touch",
+    "seedMantra": "YAM",
+    "petals": 12,
+    "description": "Anahata sits at the midpoint of the seven chakras, bridging body and spirit. It governs love, compassion, and the capacity to connect without losing yourself.",
+    "qualitiesBalanced": [
+      "Compassion for self and others",
+      "Healthy giving and receiving",
+      "Forgiveness and emotional openness",
+      "Sense of connection and belonging"
+    ],
+    "qualitiesImbalanced": [
+      "Difficulty trusting or opening up",
+      "Codependency or people-pleasing",
+      "Grief held in the chest",
+      "Jealousy or resentment"
+    ],
+    "affirmation": "I give and receive love freely.",
+    "healingPractices": [
+      "Chest-opening postures and deep breathing",
+      "Gratitude practice",
+      "Time in nature, especially green spaces",
+      "Nadi Shodhana and Ujjayi pranayama"
+    ]
   },
   {
     "slug": "vishuddha",
     "name": "Throat",
     "sanskrit": "Vishuddha",
+    "meaning": "Especially pure",
     "location": "Throat",
     "color": "#1E90C7",
-    "element": "Ether"
+    "element": "Ether",
+    "sense": "Hearing",
+    "seedMantra": "HAM",
+    "petals": 16,
+    "description": "Vishuddha governs communication and truth — the ability to speak honestly, listen fully, and express your authentic voice.",
+    "qualitiesBalanced": [
+      "Clear, honest communication",
+      "Active listening",
+      "Confidence in speaking your truth",
+      "Creative self-expression"
+    ],
+    "qualitiesImbalanced": [
+      "Difficulty saying what you mean",
+      "Fear of judgment when speaking up",
+      "Excessive talking or gossiping",
+      "Chronic throat tension"
+    ],
+    "affirmation": "I speak my truth clearly and listen with an open mind.",
+    "healingPractices": [
+      "Chanting or singing",
+      "Journaling unspoken thoughts",
+      "Neck and shoulder release work",
+      "Sheetali and Bhramari pranayama"
+    ]
   },
   {
     "slug": "ajna",
     "name": "Third Eye",
     "sanskrit": "Ajna",
+    "meaning": "Command / perception",
     "location": "Between the eyebrows",
     "color": "#5B3FA0",
-    "element": "Light"
+    "element": "Light",
+    "sense": "Intuition",
+    "seedMantra": "OM",
+    "petals": 2,
+    "description": "Ajna is the seat of intuition and insight, where perception moves beyond the physical senses. It supports clarity, imagination, and trust in your inner knowing.",
+    "qualitiesBalanced": [
+      "Clear intuition and insight",
+      "Strong focus and imagination",
+      "Trust in your inner guidance",
+      "Ability to see the bigger picture"
+    ],
+    "qualitiesImbalanced": [
+      "Overthinking or mental fog",
+      "Difficulty trusting instincts",
+      "Poor concentration",
+      "Feeling disconnected from purpose"
+    ],
+    "affirmation": "I trust my intuition and see clearly.",
+    "healingPractices": [
+      "Meditation and visualization",
+      "Reducing screen time before sleep",
+      "Reflective journaling",
+      "Sama Vritti and Kapalbhati pranayama"
+    ]
   },
   {
     "slug": "sahasrara",
     "name": "Crown",
     "sanskrit": "Sahasrara",
+    "meaning": "Thousand-petaled",
     "location": "Top of head",
     "color": "#8A6CFB",
-    "element": "Thought/Consciousness"
+    "element": "Thought / Consciousness",
+    "sense": "Beyond the senses",
+    "seedMantra": "Silence (or OM)",
+    "petals": 1000,
+    "description": "Sahasrara is the crown of the energy system, associated with pure awareness and connection to something greater than the self. It represents integration of all the chakras below it.",
+    "qualitiesBalanced": [
+      "Sense of purpose and peace",
+      "Openness to wonder and stillness",
+      "Feeling connected to something greater",
+      "Integration of mind, body, and spirit"
+    ],
+    "qualitiesImbalanced": [
+      "Cynicism or spiritual disconnection",
+      "Feeling isolated or purposeless",
+      "Over-attachment to intellect",
+      "Restlessness that meditation can't settle"
+    ],
+    "affirmation": "I am connected to the wisdom of the universe.",
+    "healingPractices": [
+      "Silent meditation",
+      "Time in stillness without stimulation",
+      "Contemplative reading or study",
+      "Slow, extended pranayama practice"
+    ]
   }
 ]
