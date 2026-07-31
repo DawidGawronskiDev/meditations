@@ -9,6 +9,10 @@ export const navigation: MenuItem[] = [
     title: "Meditations",
     url: "/meditations",
   },
+  {
+    title: "Chakras",
+    url: "/chakras",
+  },
 ];
 
 export const mobileBreakpoint = 768;

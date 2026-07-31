@@ -68,7 +68,7 @@ export function DesktopNavbar({ className, ...props }: DekstopNavbarProps) {
         </nav>
       </div>
       <div className="flex-1 flex justify-center">
-        <Link href="/">Meditation Orbits</Link>
+        <Link href="/">Meditation Orbs</Link>
       </div>
       <div className="flex-1 flex justify-end">
         <ThemeToggle />
@@ -93,8 +93,8 @@ export function MobileNavbar({
       className={cn("relative flex w-full items-center", className)}
       {...props}
     >
-      <Link href="/">
-        <span className="font-light tracking-tight">Meditation Orbits</span>
+      <Link href="/" className="hidden md:block">
+        <span className="font-light tracking-tight">Meditation Orbs</span>
       </Link>
       <div className="ml-auto flex items-center gap-1">
         <ThemeToggle />
